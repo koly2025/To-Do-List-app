@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:600|Noto+Sans|Open+Sans:400,700&display=swap');
+
+/* সমস্ত এলিমেন্টে margin, padding, color এবং box-sizing সেট করা হবে */
+*{
+  margin: 0;
+  padding: 0;
+  color: #f2f2f2;
+  box-sizing: border-box;
+}
+
+/* সেন্টার ক্লাসের স্টাইল */
+.center{
+  position: absolute; /* এলিমেন্টটিকে পজিশন করতে হবে */
+  top: 45%; /* উপরের দিক থেকে 45% */
+  left: 50%; /* বাম দিক থেকে 50% */
+  transform: translate(-50%, -50%); /* সেন্টার করতে হবে */
+  background: #1b1b1b; /* ব্যাকগ্রাউন্ড কালো রঙ */
+  border-radius: 5px; /* কোণ গোলাকার */
+}
+
+/* বাটনের স্টাইল */
+.center .button{
+  width: 350px; /* বাটনের প্রস্থ 350px */
+  background: #1b1b1b; /* ব্যাকগ্রাউন্ড কালো */
+  height: 50px; /* উচ্চতা 50px */
+  padding: 0 20px; /* বাম ও ডান প্যাডিং 20px */
+  border-radius: 5px 5px 0 0; /* উপরের কোণ গোলাকার */
+}
+
+/* টেক্সটের স্টাইল */
+.button .text{
+  font-size: 25px; /* ফন্ট সাইজ 25px */
+  font-weight: 600; /* ফন্টের ওজন 600 */
+  line-height: 50px; /* লাইনের উচ্চতা 50px */
+  letter-spacing: 1px; /* অক্ষরের মধ্যে স্পেস 1px */
+  font-family: 'Open Sans',sans-serif; /* ফন্ট ফ্যামিলি 'Open Sans' */
+}
+
+/* আইকনের স্টাইল */
+.button .icon{
+  font-size: 30px; /* ফন্ট সাইজ 30px */
+  float: right; /* ডান দিকে ভাসিয়ে রাখবে */
+  line-height: 40px; /* লাইনের উচ্চতা 40px */
+  cursor: pointer; /* কার্সর পয়েন্টারে পরিণত হবে */
+}
+
+/* ইনপুট ফিল্ডের স্টাইল */
+.center .field{
+  height: 45px; /* উচ্চতা 45px */
+  width: 350px; /* প্রস্থ 350px */
+  background: #f2f2f2; /* ব্যাকগ্রাউন্ড হালকা রঙ */
+  position: relative; /* রিলেটিভ পজিশনিং */
+  display: block; /* ব্লক এলিমেন্ট হিসেবে প্রদর্শিত হবে */
+}
+
+/* ইনপুট ফিল্ড হাইড করার জন্য */
+.field.hide{
+  display: none; /* হাইড করবে */
+}
+
+/* ইনপুট ফিল্ডের স্টাইল */
+.field input{
+  height: 100%; /* উচ্চতা 100% */
+  width: 100%; /* প্রস্থ 100% */
+  padding-left: 15px; /* বামে 15px প্যাডিং */
+  font-size: 18px; /* ফন্ট সাইজ 18px */
+  outline: none; /* আউটলাইন নেই */
+  background: none; /* ব্যাকগ্রাউন্ড নেই */
+  color: #202020; /* কালো রঙ */
+  border: 2px solid #1b1b1b; /* কালো বর্ডার */
+}
+
+/* "ADD" বাটনের স্টাইল */
+.field .add-btn{
+  position: absolute; /* পজিশন অ্যাবসোলিউট */
+  top: 50%; /* উপরের থেকে 50% */
+  right: 10px; /* ডানদিকে 10px স্পেস */
+  transform: translateY(-50%); /* মাঝখানে রাখতে হবে */
+  background: #1b1b1b; /* ব্যাকগ্রাউন্ড কালো */
+  font-size: 17px; /* ফন্ট সাইজ 17px */
+  padding: 4px 8px; /* প্যাডিং 4px উপরে-নিচে এবং 8px বামে-ডানে */
+  border-radius: 3px; /* গোলাকার কোণ */
+  cursor: pointer; /* কার্সর পয়েন্টারে পরিণত হবে */
+  font-family: 'Montserrat',sans-serif; /* ফন্ট ফ্যামিলি 'Montserrat' */
+  display: none; /* প্রথমে দৃশ্যমান নয় */
+}
+
+/* ইনপুট ফিল্ডে মান পূর্ণ হলে "ADD" বাটনটি দেখাবে */
+input:valid ~ .add-btn{
+  display: block; /* "ADD" বাটনটি ব্লক হিসেবে দেখাবে */
+}
+
+/* লিস্টের স্টাইল */
+.center ul{
+  list-style: none; /* লিস্ট স্টাইল বাদ দেওয়া হয়েছে */
+  overflow: hidden; /* লিস্টের উপাদান আড়াল করা হবে */
+}
+
+/* লিস্ট আইটেমের স্টাইল */
+ul li{
+  height: 45px; /* উচ্চতা 45px */
+  width: 100%; /* প্রস্থ 100% */
+  line-height: 45px; /* লাইনের উচ্চতা 45px */
+  background: #262626; /* ব্যাকগ্রাউন্ড গা dark ় */
+  font-family: 'Noto Sans',sans-serif; /* ফন্ট ফ্যামিলি 'Noto Sans' */
+}
+
+/* দ্বিতীয় আইটেম থেকে প্রতিটি আইটেমে ব্যাকগ্রাউন্ড কালো হবে */
+ul li:nth-child(2n){
+  background: #1b1b1b; /* গা dark ় কালো ব্যাকগ্রাউন্ড */
+}
+
+/* শেষ আইটেমের কোণ গোলাকার হবে */
+ul li:last-child{
+  border-radius: 0 0 5px 5px; /* নিচের কোণ গোলাকার */
+}
+
+/* শেষ আইটেমের ট্র্যাশ আইকনের কোণ গোলাকার হবে */
+ul li:last-child span{
+  border-radius: 0 5px 5px 5px; /* কোণ গোলাকার */
+}
+
+/* ট্র্যাশ আইকনের স্টাইল */
+ul li span{
+  margin-right: 20px; /* ডানে 20px মার্জিন */
+  height: 45px; /* উচ্চতা 45px */
+  width: 45px; /* প্রস্থ 45px */
+  margin-left: -45px; /* বামে -45px মার্জিন */
+  background: #e74c3c; /* ব্যাকগ্রাউন্ড লাল রঙ */
+  display: inline-block; /* ইনলাইন-ব্লক হিসেবে প্রদর্শন */
+  line-height: 45px; /* লাইনের উচ্চতা 45px */
+  text-align: center; /* টেক্সটকে সেন্টার করা */
+  cursor: pointer; /* কার্সর পয়েন্টারে পরিণত হবে */
+  border-radius: 0 5px 5px 0; /* কোণ গোলাকার */
+  transition: 0.3s ease; /* ট্রানজিশন সময় 0.3 সেকেন্ড */
+}
+
+/* ট্র্যাশ আইকনে হোভার করলে আইকনটি এক্সপ্যান্ড হবে */
+ul li:hover span{
+  margin-left: 0px; /* মার্জিন বামে শূন্য হবে */
+}
